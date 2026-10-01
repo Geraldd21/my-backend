@@ -22,7 +22,7 @@ db.connect((err) => {
 });
 
 app.get('/', (req, res) => {
-    res.send('Backend server is running!');
+    res.send('Welcome to my Updated Backend server!');
 });
 
 // CONTACT API
