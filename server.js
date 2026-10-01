@@ -13,8 +13,12 @@ const db = mysql.createConnection({
 });
 // Connect to database
 db.connect((err) => {
- if(err) throw err;
- console.log("Connected to MySQL Database!");
+    if (err) {
+        console.log("MySQL is not available. Running backend without database.");
+        return;
+    }
+
+    console.log("Connected to MySQL Database!");
 });
 
 app.get('/', (req, res) => {
